@@ -1,0 +1,47 @@
+package org.firstinspires.ftc.teamcode.Autonmous.OOP_Testing;
+
+import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.HardwareMap;
+
+public class Hardware {
+
+    DcMotor FL;
+    DcMotor BL;
+    DcMotor BR;
+    DcMotor FR;
+
+    HardwareMap hardwareMap;
+
+    public void Hardware(HardwareMap hardware,DcMotor FL,DcMotor FR,DcMotor BR,DcMotor BL ){
+            this.hardwareMap = hardware;
+            this.FL = FL;
+            this.BL = BL;
+            this.BR = BR;
+            this.FR = FR;
+            
+            
+    }
+
+
+
+
+    //Motor variables
+     public  void initHardware(){
+
+          FR = null;
+           FL = null;
+           BR = null;
+           BL = null;
+
+         FL = hardwareMap.dcMotor.get("FL");
+         FR = hardwareMap.dcMotor.get("FR");
+         BR = hardwareMap.dcMotor.get("BR");
+         BL = hardwareMap.dcMotor.get("BL");
+         
+         
+    }
+
+
+
+}
+
